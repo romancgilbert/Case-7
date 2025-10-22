@@ -34,7 +34,7 @@ def is_image(file):
 
 # --- API Routes ---
 
-# 1️⃣ Upload endpoint
+# Upload endpoint
 @app.post("/api/v1/upload")
 def upload():
     try:
@@ -73,7 +73,7 @@ def upload():
         return jsonify(ok=False, error=str(e)), 500
 
 
-# 2️⃣ Gallery endpoint
+# Gallery endpoint
 @app.get("/api/v1/gallery")
 def gallery():
     try:
@@ -83,7 +83,7 @@ def gallery():
         return jsonify(ok=False, error=str(e)), 500
 
 
-# 3️⃣ Health endpoint
+# Health endpoint
 @app.get("/api/v1/health")
 def health():
     return jsonify(ok=True, status="healthy"), 200
